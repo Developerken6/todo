@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Job</th>
+              <th scope="col">Done?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% x = 1 %>
+            <% list.item.forEach(function(list){%>
+            <tr>
+            <td><%= x++ %></td>
+            <td><%=list.item%></td>
+            <td><form id="button" action="/item/<%=list._id%>?_method=DELETE" method="POST"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></form></td>
+            </tr>
+            <%});%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1>Add or remove things to <%=list.title%></h1>
+        <form class="todo-add" action="/index/<%=list._id%>/add" method="post">
+          <div class="form-group">
+            <label>Enter an item to add to the list:</label>
+            <input class="form-control" type="text" name="item" value="">
+          </div>
+          <div class="form-group">
+            <button id="btn" class="btn btn-primary" type="submit" name="button" value="add">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      </div>
+    </div>
+
+
+<% include ../partials/footer %>

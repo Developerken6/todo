@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Choose a todo list</h1>
+        
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Job</th>
+                  <th scope="col">Enter</th>
+                  <th scope="col">Remove</th>
+                </tr>
+              </thead><% x = 1 %>
+              <tbody><%list.forEach(function(list){ %>
+                <tr>
+                  <td><%= x++%></td>
+                  <td><%=list.title%></td>
+                  <td><a href="/index/<%=list._id%>" id="btn" class="btn btn-primary">Choose</a></td>
+                  <td><form id="button" action="/<%=list._id%>/?_method=DELETE" method="POST"><button id="btn" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></form></td>
+                  <% }); %>
+                </tr>
+      </div>
+    </div>
+  </div>
+<% include ./partials/footer %>

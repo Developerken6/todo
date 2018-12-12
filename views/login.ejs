@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <form action="/login" method="POST">
+          <h1>Login Form</h1>
+          <div class="form-group">
+            <label>Enter Username:</label>
+              <input class="form-control" type="text" name="username" placeholder="enter username here">
+          </div>
+          <div class="form-group">
+            <label>Enter Password:   </label>
+              <input class="form-control" type="password" name="password" placeholder="enter password here">
+          </div>
+          <div class="form-group">
+            <button id="btn" class="btn btn-primary" type="submit" name="button">Login</button>
+          </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+<% include ./partials/footer %>

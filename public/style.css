@@ -1,0 +1,48 @@
+/* LOGIN REGISTER PAGE STYLING  */
+
+.col form {
+  margin: 100px;
+  padding: 25px;
+  width: 50%;
+}
+
+.col .form-control {
+  width: 50%;
+}
+
+/* ALGEMENE STLYING */
+
+body {
+  background-image: url("/cheap_diagonal_fabric.png");
+}
+
+#btn {
+  width: 150px;
+  height: 30px;
+  padding: 3px;
+  float: left;
+}
+
+/* INDEX PAGE STYLING */
+
+.col {
+  margin-top: 60px;
+}
+
+#button {
+  display: block;
+}
+
+.col form {
+  margin: auto;
+  display: block;
+}
+
+.table td {
+  text-align: left;
+}
+
+.table form {
+  padding: 0;
+  margin: 0;
+}

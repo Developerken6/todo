@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <form action="/newList" class="new" method="POST" name="new">
+        <h1>Create a new List</h1>
+        <div class="form-group">
+          <label>Type the title of a new list</label>
+          <input class="form-control" type="text" name="title" placeholder="type a title of a new list">
+        </div>
+        <div class="form-group">
+          <button id="btn" class="btn btn-primary" type="submit" name="button">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
